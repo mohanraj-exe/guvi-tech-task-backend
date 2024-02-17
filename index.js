@@ -13,10 +13,13 @@ const userRoute = require("./routes/user.route");
 app.use(express.json());
 
 // Enable CORS for all routes
-app.use(cors({
-  origin: 'https://guvi-tech-task-frontend.netlify.app',
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: 'https://guvi-tech-task-frontend.netlify.app',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+// }));
+
+app.use(cors());
 
 app.get("/", (req, res, next) => {
   res.status(200).json({ Message: "home screen" });
