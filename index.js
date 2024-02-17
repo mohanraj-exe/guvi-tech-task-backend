@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Enable CORS for all routes
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://guvi-tech-task-frontend.netlify.app',
   credentials: true,
 }));
 
